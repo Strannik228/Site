@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YurtaPark — семейный парк развлечений в Актобе. Аттракционы, пикники, мастер-классы и больше!">
     {% load static %}
-    <link rel="icon" href="{% static 'images/logo96x96.png' %}" sizes="32x32" type="image/png">
+    <link rel="icon" href="/static/images/Logo96x96.png" sizes="300x300" type="image/png">
+    <link rel="stylesheet" href="/static/CSS/styles.css">
     <title>YurtaPark</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -24,7 +26,7 @@
     <div class="relative w-full h-screen bg-cover bg-center bg-overlay" style="background-image: url('https://media.gettyimages.com/id/1165387215/photo/happy-brother-playing-in-the-playground.jpg?b=1&s=2048x2048&w=0&k=20&c=l5VIvCBk_KvNeQgsqh9qm31m_BcD7TQKs0rWp61LJg8=');">
         <header id="website-header" class="relative z-50 p-6 text-white">
             <div class="max-w-6xl mx-auto flex items-center justify-between">
-                <div class="w-1/3"></div> <!-- Пустое пространство слева -->
+                <div class="w-1/3"></div> 
                 <h2 class="text-lg font-bold text-white uppercase w-1/3 text-center">YURTAPARK</h2>
                 <div class="w-1/3 flex justify-end">
                     <button class="border-2 border-white px-4 py-2">Contact us</button>
@@ -57,138 +59,87 @@
     </section>
 
     <!-- Черный блок с карточками -->
-    <section class="relative">
-        <div class="relative flex flex-none break-word transition-all duration-300 items-center fix-safari-flickering" 
-             style="min-height: 134px; padding-top: 0px; padding-bottom: 0px;">
-            <div class="absolute inset-0 z-10 pointer-events-none">
-                <div class="absolute inset-0 z-10 transition-all duration-300" 
-                     style="background-color: rgb(20, 19, 22);"></div>
-            </div>
-            <div class="relative z-10 container mx-auto px-5 md:px-6 transition-all duration-300 pt-12 lg:pt-20 pb-12 lg:pb-20">
-                <div class="relative z-10 w-full h-full">
-                    <div class="flex flex-col gap-4 mb-6 items-start">
-                        <p class="w-max max-w-full body-small font-semibold" style="color: rgb(182, 133, 255);">
-                            Бесконечные приключения
-                        </p>
-                        <h2 class="heading-large block w-full text-white">
-                            Незабываемые семейные приключения
-                        </h2>
-                    </div>
+    <section class="relative bg-black text-white py-12">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-10 text-[rgb(182,133,255)]">
+                Бесконечные приключения
+            </h2>
+            <p class="text-lg text-center max-w-2xl mx-auto mb-12">
+                Незабываемые семейные приключения ждут вас!
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Карточка 1 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
+                    <img src="https://media.gettyimages.com/id/176707793/photo/little-boy-zipping-in-adventure-park.jpg?b=1&s=2048x2048&w=0&k=20&c=6rrMRIyeho2AyYDlW6x6wwQqwUOkNY4P8_n7vv6QlEA=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Приключенческая игровая площадка</h3>
+                    <p class="text-lg">
+                        Почувствуйте радость от игр, лазанья и аттракционов, созданных для незабываемых семейных развлечений.
+                    </p>
                 </div>
-                <div class="flex flex-wrap w-full justify-start" style="gap: 40px;">
-                    
-                    <!-- Карточка 1: Приключенческая игровая площадка -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Приключенческая игровая площадка" 
-                                 src="https://media.gettyimages.com/id/176707793/photo/little-boy-zipping-in-adventure-park.jpg?b=1&s=2048x2048&w=0&k=20&c=6rrMRIyeho2AyYDlW6x6wwQqwUOkNY4P8_n7vv6QlEA=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Приключенческая игровая площадка
-                            </p>
-                            <p class="text-lg">
-                                Почувствуйте радость от игр, лазанья и аттракционов, созданных для незабываемых семейных развлечений.
-                            </p>
-                        </div>
-                    </div>
     
-                    <!-- Карточка 2: Интерактивная водная зона -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Интерактивная водная зона" 
-                                 src="https://media.gettyimages.com/id/1370015735/photo/family-with-two-boys-having-fun-at-water-park.jpg?b=1&s=2048x2048&w=0&k=20&c=vSd-z-IVxhAbzh4YkOKf_Rg62CWF7veFPRxJVNxKi14=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Интерактивная водная зона
-                            </p>
-                            <p class="text-lg">
-                                Поплескайтесь в нашей безопасной и захватывающей водной игровой зоне, которая идеально подходит для того, чтобы охладиться в жаркие дни.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Карточка 2 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
+                    <img src="https://media.gettyimages.com/id/1370015735/photo/family-with-two-boys-having-fun-at-water-park.jpg?b=1&s=2048x2048&w=0&k=20&c=vSd-z-IVxhAbzh4YkOKf_Rg62CWF7veFPRxJVNxKi14=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Интерактивная водная зона</h3>
+                    <p class="text-lg">
+                        Поплескайтесь в нашей безопасной и захватывающей водной игровой зоне, которая идеально подходит для жарких дней.
+                    </p>
+                </div>
     
-                    <!-- Карточка 3: Мини-гольф -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Мини-гольф" 
-                                 src="https://media.gettyimages.com/id/1366860797/photo/little-girl-putting-at-mini-golf-its-in-the-hole.jpg?b=1&s=2048x2048&w=0&k=20&c=JnQU3cVmHdCBKIuxX_NzfzBLekBv9f1F8Q5QUCL-lKQ=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Мини-гольф
-                            </p>
-                            <p class="text-lg">
-                                Проверьте свои навыки на нашем креативно оформленном поле для мини-гольфа, которое понравится как детям, так и взрослым.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Карточка 3 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
+                    <img src="https://media.gettyimages.com/id/1366860797/photo/little-girl-putting-at-mini-golf-its-in-the-hole.jpg?b=1&s=2048x2048&w=0&k=20&c=JnQU3cVmHdCBKIuxX_NzfzBLekBv9f1F8Q5QUCL-lKQ=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Мини-гольф</h3>
+                    <p class="text-lg">
+                        Проверьте свои навыки на креативно разработанном мини-гольфе, который понравится как детям, так и взрослым.
+                    </p>
+                </div>
     
-                    <!-- Карточка 4: Места для пикника и барбекю -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Места для пикника и барбекю" 
-                                 src="https://media.gettyimages.com/id/1288445703/photo/picnic-area-in-the-city-park-on-a-sunny-autumn-day.jpg?b=1&s=2048x2048&w=0&k=20&c=cYScv28m6TnPLI4I_mQjKESXL6lwHTlYHb5Ab4NT-50=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Места для пикника и барбекю
-                            </p>
-                            <p class="text-lg">
-                                Отдохните в наших живописных зонах для пикников со специально отведенными местами для барбекю и насладитесь семейными обедами на свежем воздухе.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Карточка 4 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
+                    <img src="https://media.gettyimages.com/id/1288445703/photo/picnic-area-in-the-city-park-on-a-sunny-autumn-day.jpg?b=1&s=2048x2048&w=0&k=20&c=cYScv28m6TnPLI4I_mQjKESXL6lwHTlYHb5Ab4NT-50=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Автодром</h3>
+                    <p class="text-lg">
+                        Почувствуйте азарт гонок, управляя электромобилями на специально оборудованной трассе.
+                    </p>
+                </div>
     
-                    <!-- Карточка 5: Исследование природных троп -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Исследование природных троп" 
-                                 src="https://media.gettyimages.com/id/1332926319/photo/happy-mother-and-daughter-are-enjoying-in-nature.jpg?b=1&s=2048x2048&w=0&k=20&c=wx4YDXs2oA73OzFH-AzHhTj0xffXjJ0HNA6qi1ouj5M=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Исследование природных троп
-                            </p>
-                            <p class="text-lg">
-                                Откройте для себя прекрасные пешеходные тропы среди пышной зелени, идеально подходящие для спокойных семейных прогулок.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Карточка 5 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
+                    <img src="https://media.gettyimages.com/id/1332926319/photo/happy-mother-and-daughter-are-enjoying-in-nature.jpg?b=1&s=2048x2048&w=0&k=20&c=wx4YDXs2oA73OzFH-AzHhTj0xffXjJ0HNA6qi1ouj5M=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Шоу-программы</h3>
+                    <p class="text-lg">
+                        Наслаждайтесь увлекательными представлениями, цирковыми шоу и живыми выступлениями на главной сцене.
+                    </p>
+                </div>
     
-                    <!-- Карточка 6: Семейные мастер-классы -->
-                    <div class="flex flex-col w-full h-full overflow-hidden" style="flex: 0 0 calc(33.3333% - 26.6667px);">
-                        <div class="relative w-full mx-auto h-64">
-                            <img alt="Семейные мастер-классы" 
-                                 src="https://media.gettyimages.com/id/2173369720/photo/boy-sitting-on-a-colorful-chair-at-outdoor-activity.jpg?b=1&s=2048x2048&w=0&k=20&c=4CMdts-SX0oFFlKWH2XySHibM4lMWykTQlW1LeWRRIY=" 
-                                 class="w-full h-full object-cover rounded-lg">
-                        </div>
-                        <div class="flex flex-col items-start py-6 text-white">
-                            <p class="text-xl font-bold mb-2">
-                                Семейные мастер-классы
-                            </p>
-                            <p class="text-lg">
-                                Присоединяйтесь к увлекательным семинарам, которые предлагают познавательные занятия для детей всех возрастов.
-                            </p>
-                        </div>
-                    </div>
-    
+                <!-- Карточка 6 -->
+                <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full
+                ">
+                    <img src="https://media.gettyimages.com/id/2173369720/photo/boy-sitting-on-a-colorful-chair-at-outdoor-activity.jpg?b=1&s=2048x2048&w=0&k=20&c=4CMdts-SX0oFFlKWH2XySHibM4lMWykTQlW1LeWRRIY=" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Карусель</h3>
+                    <p class="text-lg">
+                        Классический аттракцион для всей семьи – закружитесь на ярких каруселях и получите море эмоций!
+                    </p>
                 </div>
             </div>
         </div>
+    </section>
+    
     
     
 <!-- Мозаика изображений -->
     <section class="relative">
         <div class="relative flex flex-none transition-all duration-300 items-center fix-safari-flickering" style="min-height: 134px;">
             <div class="absolute inset-0 z-10 pointer-events-none">
-                <div class="absolute inset-0 z-10 transition-all duration-300" style="background-color: rgb(20, 19, 22);"></div>
+                <div class="absolute inset-0 z-10 transition-all duration-300" style="background-color: rgb(0, 0, 0);"></div>
             </div>
             <div class="relative z-10 transition-all duration-300 w-full pt-8 lg:pt-12 pb-12 lg:pb-20">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -286,7 +237,7 @@
         <div class="relative flex break-word transition-all duration-300 flex-col-reverse lg:flex-row-reverse" style="min-height: 134px;">
             <div class="flex-1 relative">
                 <div class="absolute inset-0 z-10 pointer-events-none">
-                    <div class="absolute inset-0 z-10 transition-all duration-300" style="background-color: rgb(20, 19, 22);"></div>
+                    <div class="absolute inset-0 z-10 transition-all duration-300" style="background-color: rgb(0, 0, 0);"></div>
                 </div>
                 <div class="relative z-10 w-full h-full">
                     <div class="relative z-10 container flex flex-col h-full mx-auto px-5 md:px-6 lg:px-20 justify-center">
@@ -314,6 +265,28 @@
             </div>
         </div>
     </section>    
+    
+    <div id="contactModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-75">
+        <div class="bg-white text-black p-6 rounded-xl max-w-md w-full transform translate-x-0 translate-y-0">
+            <h2 class="text-2xl font-bold mb-4 text-center">Свяжитесь с нами</h2>
+            <p class="mb-4 text-center">Вы можете связаться с нами по номеру:<br>
+                <strong>+7 (777) 123-45-67</strong> или по email: <strong>info@yurtapark.kz</strong>
+            </p>
+            <button onclick="closeModal()" class="mt-2 px-4 py-2 bg-purple-500 text-white rounded-lg w-full">
+                Закрыть
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        const modal = document.getElementById("contactModal");
+        function closeModal() {
+            modal.classList.add("hidden");
+        }
+        document.querySelector("button").addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+    </script>
     
 
 </body>
