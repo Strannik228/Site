@@ -39,3 +39,9 @@ img {
     min-height: 300px; /* Минимальная высота, чтобы не сжималось */
   }
   
+  @media (max-width: 640px) {
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
