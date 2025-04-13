@@ -19,9 +19,11 @@ from django.urls import path
 from main.views import home
 from django.conf import settings
 from django.conf.urls.static import static
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('menu/', views.menu, name='menu'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
