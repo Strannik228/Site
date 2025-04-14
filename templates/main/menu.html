@@ -26,22 +26,22 @@ style="min-height: 500px; bottom: 10px; border-radius: 0px 0px 20px 20px; box-sh
 
 
     
-<!-- Шапка, которая "висит" внутри серого блока -->
+
 <header class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full bg-[#2b2b2b] p-4 z-10 flex items-center"
     style="border-radius: 20px 20px 0px 0px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);">
         
-    <!-- Кнопка "Назад" слева -->
+   
     <button onclick="window.location.href='/'" class="text-white px-4 py-2">
         Назад
     </button>
 
-     <!-- Заголовок "AYANAT" по центру -->
+     
     <div class="absolute left-1/2 transform -translate-x-1/2">
          <h2 class="text-lg font-bold text-white uppercase text-center">AYANAT</h2>
     </div>
 </header>
 
-<!-- Стилизация scrollbar -->
+
 <style>
 .scrollbar-style::-webkit-scrollbar {
     height: 6px;
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let menuContainer = document.getElementById("menu-container");
 
     function updateHeight() {
-        let newHeight = menuContainer.scrollHeight + 100; // Добавляем немного отступа
-        mainContainer.style.minHeight = newHeight + "px"; // Устанавливаем новую высоту
+        let newHeight = menuContainer.scrollHeight + 100; 
+        mainContainer.style.minHeight = newHeight + "px"; 
     }
 
-    updateHeight(); // Вызываем при загрузке
-    window.addEventListener("resize", updateHeight); // Обновляем при изменении окна
+    updateHeight(); 
+    window.addEventListener("resize", updateHeight); 
 });
 </script>
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </style>
 
 
-<!-- Скроллбар с категориями -->
+
 <nav class="scrollbar-style sticky top-[100px] w-[90%] mx-auto bg-[#424242] shadow-inner p-3 rounded-full overflow-x-auto z-40">
     <ul class="flex flex-nowrap gap-4 px-2 whitespace-nowrap">
         {% for category in categories %}
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </ul>
 </nav>
 
-<!-- Контейнер с блюдами, сгруппированными по категориям -->
+
 <div id="menu-container" class="w-[97%] mx-auto mt-6">
     {% for category in categories %}
     <h2 id="{{ category.name|lower|cut:' ' }}" class="text-white text-xl font-bold mt-[120px] scroll-mt-[100px]">{{ category.name }}</h2>
@@ -117,26 +117,26 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener('click', function(event) {
             event.preventDefault();
     
-            // Убираем подсветку у всех кнопок
+            
             document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('bg-[#EDE56D]', 'text-black'));
     
-            // Добавляем подсветку на активную кнопку
+            
             this.classList.add('bg-[#EDE56D]', 'text-black');
     
-            // Плавный скролл к нужному разделу
+            
             const targetId = this.getAttribute('data-target');
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
-                // Центрируем скроллбар (НО НЕ БЛОКИРУЕМ скроллинг мышкой)
+                
                 let scrollContainer = document.querySelector('.scrollbar-style');
                 scrollContainer.scrollTo({ left: this.offsetLeft - scrollContainer.clientWidth / 2, behavior: 'smooth' });
             }
         });
     });
     
-    // Скроллбар двигается при прокрутке меню
+    
     window.addEventListener('scroll', () => {
         let sections = document.querySelectorAll('h2');
         let scrollPosition = window.scrollY + 150;
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (activeBtn) {
                     activeBtn.classList.add('bg-[#EDE56D]', 'text-black');
     
-                    // Скроллбар плавно перемещается, но НЕ центрируется автоматически
+                    
                     let scrollContainer = document.querySelector('.scrollbar-style');
                     scrollContainer.scrollTo({ left: activeBtn.offsetLeft - scrollContainer.clientWidth / 2, behavior: 'smooth' });
                 }
@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let scrollContainer = document.querySelector(".scrollbar-style");
         let scrollY = window.scrollY;
     
-        // Скроллбар приподнимается вверх при прокрутке вниз
-        let newTop = Math.max(5, 120 - scrollY * 1); // Чем больше scrollY, тем выше поднимается
+        
+        let newTop = Math.max(5, 120 - scrollY * 1);
     
         scrollContainer.style.top = newTop + "px";
     });
