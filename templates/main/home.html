@@ -22,15 +22,15 @@
 <body class="bg-black text-white">
     <script>console.log("Страница загружена");</script>
     
-    <!-- Фон и шапка -->
+
     <div class="relative w-full h-screen bg-cover bg-center bg-overlay" style="background-image: url('/static/images/fon.jpg');">
         <header id="website-header" class="relative z-50 p-6 text-white">
             <div class="max-w-6xl mx-auto flex items-center justify-between">
-              <!-- Кнопка Меню -->
+              
               <button class="border-2 border-white px-4 py-2" onclick="window.location.href='{% url 'menu' %}'">Меню</button>
               
             
-              <!-- Кнопки Связь и Прайс -->
+              
               <div class="w-1/3 flex flex-col md:flex-row justify-end items-center space-y-2 md:space-y-0 md:space-x-4">
                 <button class="border-2 border-white px-4 py-2" onclick="openContactModal()">Связь</button>
                 <button class="border-2 border-white px-4 py-2" onclick="openPriceModal()">Прайс</button>
@@ -55,7 +55,7 @@
     </div>
       
 
-    <!-- Фиолетовый блок -->
+    
     <section class="relative">
         <div class="relative flex flex-none break-word transition-all duration-300 items-center" style="min-height: 134px;">
             <div class="absolute inset-0 z-10 pointer-events-none">
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <!-- Черный блок с карточками -->
+    
     <section class="relative bg-black text-white py-12">
         <div class="container mx-auto px-5">
             <h2 class="text-4xl font-bold text-center mb-10 text-[rgb(182,133,255)]">
@@ -83,7 +83,7 @@
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Карточка 1 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                     <img src="/static/images/Verovochnyy_park.jpg" 
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -93,7 +93,7 @@
                     </p>
                 </div>
     
-                <!-- Карточка 2 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                     <img src="/static/images/Vodnoye_veselye.jpg" 
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -103,7 +103,7 @@
                     </p>
                 </div>
     
-                <!-- Карточка 3 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                     <img src="/static/images/gorki.jpg"  
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -113,7 +113,7 @@
                     </p>
                 </div>
     
-                <!-- Карточка 4 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                     <img src="/static/images/sobaki.jpg" 
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -123,7 +123,7 @@
                     </p>
                 </div>
     
-                <!-- Карточка 5 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                     <img src="/static/images/velo.jpg" 
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -133,7 +133,7 @@
                     </p>
                 </div>
     
-                <!-- Карточка 6 -->
+                
                 <div class="bg-black-800 p-6 rounded-lg min-h-[200px] w-full">
                 <img src="/static/images/cafe.jpg"  
                          class="w-full h-48 object-cover rounded-lg mb-4">
@@ -148,7 +148,7 @@
     
     
     
- <!-- Мозаика изображений -->
+
     <section class="relative">
         <div class="relative flex flex-none transition-all duration-300 items-center fix-safari-flickering" style="min-height: 134px;">
             <div class="absolute inset-0 z-10 pointer-events-none">
@@ -157,37 +157,37 @@
             <div class="relative z-10 transition-all duration-300 w-full pt-8 lg:pt-12 pb-12 lg:pb-20">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     
-                    <!-- Фото 1 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto1.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
     
-                    <!-- Фото 2 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto2.jpg" 
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
 
-                    <!-- Фото 6 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto6.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
 
-                    <!-- Фото 7 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto7.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
     
-                    <!-- Фото 3 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto3.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
 
-                    <!-- Фото 8 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto8.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
@@ -196,13 +196,13 @@
                 </div>
     
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                    <!-- Фото 4 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto4.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
                     </div>
     
-                    <!-- Фото 5 -->
+                    
                     <div class="relative overflow-hidden transition-all duration-300 aspect-w-1 aspect-h-1">
                         <img src="/static/images/foto5.jpg"
                              class="w-full h-full object-center object-cover rounded-lg">
@@ -279,7 +279,7 @@
                         </ul>
                         <p class="text-xl"><strong>Телефон:</strong> +7 (713) 241-99-02</p>
     
-                        <!-- Социальные сети -->
+                        
                         <div class="mt-6">
                             <p class="text-xl font-bold">Так же мы есть в соцсетях:</p>
                             <div class="flex items-center space-x-4 mt-4">
@@ -307,7 +307,7 @@
     
 
     
-    <!-- Модальное окно -->
+    
     <div id="contactModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-75">
         <div class="bg-white text-black p-6 rounded-xl max-w-md w-full">
             <h2 class="text-2xl font-bold mb-4 text-center">Связь</h2>
@@ -327,7 +327,7 @@
         </div>
     </div>
     
-    <!-- Модальное окно Прайс -->
+    
     <div id="priceModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-75">
         <div class="bg-white text-black p-6 rounded-xl max-w-md w-full">
             <h2 class="text-2xl font-bold mb-4 text-center">Стоимость входного билета</h2>
@@ -345,7 +345,7 @@
         </div>
     </div>
     
-    <!-- Скрипты для открытия и закрытия модальных окон -->
+    
     <script>
         function openContactModal() {
             document.getElementById("contactModal").classList.remove("hidden");
